@@ -1,0 +1,13 @@
+//application entry for all server
+
+const http = require('http');
+
+//app express
+const app = require('../app');
+
+const port = parseInt(process.env.PORT, 10  ) || 3000;
+
+app.set('port', port);
+
+const server =http.createServer(app);
+server.listen(port);
