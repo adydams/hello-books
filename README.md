@@ -7,7 +7,7 @@ Visit my app [here]
 # API Documentation
 The API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API status and errors.
 
-## Features
+## Features 
 
 **Users**:
 - A Regular User can:
