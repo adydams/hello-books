@@ -4,12 +4,18 @@ module.exports = (sequelize, DataTypes) => {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique:true
+      unique:true,
+      validate: {
+        is: /^[a-z0-9\_\-]+$/i,
+      }
     },
     username:{
       type: DataTypes.STRING,
       allowNull: false,
-      unique:true
+      unique:true,
+      validate: {
+        is: /^[a-z0-9\_\-]+$/i,
+      }
     },
     password:{
       type: DataTypes.STRING,
@@ -18,7 +24,10 @@ module.exports = (sequelize, DataTypes) => {
     email:{
       type: DataTypes.STRING,
       allowNull: false,
-      unique:true
+      unique:true,
+      validate: {
+        isEmail: true
+      }
     },
     firstName:{
       type: DataTypes.STRING,
@@ -61,3 +70,11 @@ module.exports = (sequelize, DataTypes) => {
   });
   return User;
 };
+// User.statics.findByToken = ((email, password)=>{
+//       return findOne({email}).then((user)=>{
+//           if(!user){
+//             return 
+//           }
+
+//       })
+// })
