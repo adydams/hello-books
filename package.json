@@ -4,21 +4,43 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": " mocha **/*.spec.js",
+    "test-watch": "nodemon --exec \"npm test\" ",
+    "test-migrate":"NODE_ENV=test sequelize db:migrate"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "The Hello-books is a digital library management system. It also ensures that users are authorized and able to manage library books.",
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
     "dotenv": "^4.0.0",
+    "eslint": "^4.11.0",
+    "expect": "^21.2.1",
     "express": "^4.15.4",
+    "jsonwebtoken": "^8.1.0",
+    "mocha": "^4.0.1",
     "morgan": "^1.9.0",
     "nodemon": "^1.12.1",
     "pg": "^7.3.0",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.22.6",
     "sequelize-cli": "^3.0.0",
+    "supertest": "^3.0.0",
     "uuid": "^3.1.0"
-  }
+  },
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-plugin-react": "^7.4.0",
+    "mocha": "^4.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adydams/hello-books.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adydams/hello-books/issues"
+  },
+  "homepage": "https://github.com/adydams/hello-books#readme"
 }
