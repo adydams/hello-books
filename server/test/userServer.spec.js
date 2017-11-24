@@ -1,4 +1,5 @@
 const request = require('supertest');
+const chai = require('chai');
 const expect = require('expect');
 const app = require('../../app');
 const { User } = require('../models/index').User;
