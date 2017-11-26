@@ -1,5 +1,9 @@
-# hello-books
 
+[![Build Status](https://travis-ci.org/adydams/hello-books.svg?branch=setup-eslint-houndCI)](https://travis-ci.org/adydams/hello-books)
+
+[![Coverage Status](https://coveralls.io/repos/github/adydams/hello-books/badge.svg?branch=setup-eslint-houndCI)](https://coveralls.io/github/adydams/hello-books?branch=master)
+
+# hello-books
 The Hello-books is a digital library management system. It also ensures that users are authorized and able to manage library books.
 
 Visit my app [here] 
